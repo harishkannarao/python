@@ -1,4 +1,4 @@
 venv/
 target/
 .pybuilder/
-*.pyc
+__pycache__/
