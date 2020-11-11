@@ -12,3 +12,7 @@
 	pip install pybuilder
 
     pyb --start-project
+
+## Build Commands
+
+    pyb
