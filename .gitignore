@@ -1,4 +1,9 @@
 venv/
 target/
 .pybuilder/
+.idea/
 __pycache__/
+/build_requirements.txt
+/build_requirements_development.txt
+/requirements.txt
+/requirements_development.txt

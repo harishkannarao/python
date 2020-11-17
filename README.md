@@ -10,9 +10,15 @@
 	source venv/bin/activate
 
 	pip install pybuilder
+	
+	pip install pip-tools
 
     pyb --start-project
 
+## pycharm Integration
+
+    pyb pycharm_generate
+    
 ## Build Commands
 
-    pyb
+    pyb pip_sync publish
