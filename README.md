@@ -15,10 +15,16 @@
 
     pyb --start-project
 
-## pycharm Integration
+## Build Commands
+
+    pyb clean publish
+    
+## PyCharm / Idea Integration
+
+#### Generate modules
 
     pyb pycharm_generate
     
-## Build Commands
+#### Install dependencies as pip packages
 
-    pyb pip_sync publish
+    pyb pip_sync
