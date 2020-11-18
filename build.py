@@ -1,4 +1,5 @@
 #   -*- coding: utf-8 -*-
+import os
 from pybuilder.core import use_plugin, init
 
 use_plugin("python.core")
@@ -11,6 +12,7 @@ use_plugin('pypi:pybuilder_pip_tools', '==1.*')
 
 
 name = "python"
+version = "{0}".format(os.environ.get("BUILD_VERSION", "latest"))
 default_task = "publish"
 
 

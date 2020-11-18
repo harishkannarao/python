@@ -19,6 +19,10 @@
 
     pyb clean publish
     
+## Generate tar ball with version
+
+    BUILD_VERSION="1.0.0" pyb clean publish
+    
 ## PyCharm / Idea Integration
 
 #### Generate modules
