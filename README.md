@@ -11,17 +11,21 @@
 
 	pip install pybuilder
 	
-	pip install pip-tools
-
     pyb --start-project
 
 ## Build Commands
 
-    pyb clean publish
+#### Full Build (unit and integration tests)
+
+    pyb clean install_dependencies analyze publish
+    
+#### Run unit and integration tests
+
+    pyb clean run_unit_tests    
     
 ## Generate tar ball with version
 
-    BUILD_VERSION="1.0.0" pyb clean publish
+    BUILD_VERSION="1.0.0" pyb clean install_dependencies analyze publish
     
 ## PyCharm / Idea Integration
 
@@ -31,4 +35,10 @@
     
 #### Install dependencies as pip packages
 
-    pyb pip_sync
+    pyb install_dependencies
+    
+## pyb commands
+
+#### List Tasks
+
+    pyb --list-tasks
