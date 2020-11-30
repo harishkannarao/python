@@ -18,8 +18,9 @@ default_task = ['clean', 'install_dependencies', 'analyze', 'publish']
 
 @init
 def set_properties(project):
-    project.build_depends_on("mockito")
-    project.build_depends_on('pyassert')
+    project.build_depends_on("mockito", "==1.2.2")
+    project.build_depends_on('pyassert', "==0.4.2")
+    project.depends_on('python-dateutil', '==2.7.4')
 
     project.set_property('coverage_break_build', False)
     project.set_property('flake8_break_build', True)
