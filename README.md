@@ -11,8 +11,6 @@
 
 	pip install pybuilder
 	
-    pyb --start-project
-
 ## Build Commands
 
 #### Full Build (unit and integration tests)

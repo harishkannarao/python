@@ -1,0 +1,33 @@
+name: 'CI-master'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  master-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'master'
+    - name: Install Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: 'Install dependencies'
+      run: |
+        python -m pip install --upgrade pip
+        pip install pybuilder
+    - name: 'CI Build Command'
+      timeout-minutes: 20
+      run: |
+        pyb clean install_dependencies analyze publish
+    - name: Archive reports
+      uses: actions/upload-artifact@v1
+      if: ${{ always() }}
+      with:
+        name: reports
+        path: target/reports
